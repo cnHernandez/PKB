@@ -1,0 +1,299 @@
+/* Estilos para la sección de productos */
+section {
+    margin: 0; /* Eliminar margen */
+    padding: 0; /* Eliminar padding */
+}
+/* Asegúrate de que el contenedor no tenga margen adicional */
+.container-fluid {
+    margin: 0; /* Eliminar margen adicional */
+}
+
+.titulo-productos {
+    color: white; /* Cambia el color del texto a blanco */
+    font-family: 'Lobster', cursive;/* Fuente personalizada */
+    font-size: 2.5rem; /* Ajusta el tamaño de la fuente */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Agrega un poco de sombra para mejorar la legibilidad */
+}
+
+#productos {
+    background-color: rgba(225, 2, 114, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.producto-container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ocultar la descripción por defecto */
+.producto-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(225, 2, 114, 0.7); /* Fondo semitransparente */
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    display: none; /* Oculto por defecto */
+    list-style-type: none; /* Eliminamos los puntos de la lista */
+}
+
+/* Mostrar la descripción al pasar el cursor por la imagen */
+.producto-container:hover .producto-description {
+    display: block;
+}
+
+/* Estilo para la lista dentro de la descripción */
+.producto-description ul {
+    padding-left: 20px;
+}
+
+.producto-description li {
+    margin-bottom: 5px; /* Espaciado entre los elementos de la lista */
+    color: white;
+}
+
+/* Asegura que las imágenes ocupen el ancho de la columna y se ajusten */
+#productos .producto-img {
+    width: 60%;
+    height: auto; /* Mantiene la proporción original */
+    transition: transform 0.3s ease-in-out; /* Transición suave para el hover */
+    display: block; /* Asegura que las imágenes no tengan espacio adicional a los lados */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+}
+
+/* Efecto hover que agranda la imagen */
+#productos .producto-img:hover {
+    transform: scale(1.2); /* Agranda la imagen al 110% */
+}
+
+/* Asegura que los enlaces no tengan bordes o efectos extra */
+#productos .producto-link {
+    text-decoration: none;
+    display: block;
+}
+
+/* Control de cantidad (botones + y -) centrados */
+.cantidad-control {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cantidad-color {
+    color: rgba(225, 2, 114, 0.5);
+    font-weight: bold; /* Otras propiedades que desees */
+}
+
+/* Espacio entre las columnas */
+#productos .col-md-4 {
+    margin-bottom: 20px;
+}
+
+/* Para evitar márgenes automáticos en los elementos principales */
+main {
+    flex-grow: 1;
+    width: 100%; /* El main también debe ocupar el ancho completo */
+}
+
+/* Asegura que no haya márgenes laterales en el body */
+body {
+    background-color: #e10272;
+    margin: 0;
+    padding: 0;
+}
+
+#contacto {
+    background-color: rgba(225, 2, 114, 0.5);
+    padding: 20px; 
+    width: 100%; /* Asegura que abarque el ancho completo */  
+}
+
+.btn-enviar {
+    background-color: #e10272 !important;
+    border-color: #e10272 !important;
+    color: white !important;
+}
+
+.btn-enviar:hover {
+    background-color: #d00266 !important; /* Color ligeramente más oscuro para el efecto hover */
+    border-color: #d00266 !important;
+}
+
+/* Cambiar el color de la barra de navegación */
+.navbar-custom {
+    background-color: #e10272; /* Cambia este color según tu preferencia */
+}
+
+/* Estilo para los enlaces del menú */
+.navbar-nav .nav-link {
+    color: white !important; /* Color de texto blanco */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Cambiar color del texto en hover */
+.navbar-nav .nav-link:hover {
+    color: #d00266; /* Color al pasar el mouse */
+}
+
+/* Estilo personalizado para el logo */
+.navbar-brand img {
+    height: 40px; /* Ajusta el tamaño del logo */
+    margin-right: 10px;
+}
+
+/* Estilo para el carrito */
+.navbar-nav.ms-auto {
+    margin-left: auto; /* Esto mantiene el carrito en la esquina derecha */
+}
+
+/* Estilo para el carrito */
+.navbar-nav.ms-auto .nav-link {
+    color: white !important; /* Color de texto blanco para el carrito */
+}
+
+/* Cambiar el color de la cantidad del carrito */
+#cart-count, #cart-count-bottom {
+    background-color: rgba(153, 91, 122, 0.5) !important;  
+    color: white !important; /* Cambia el color aquí */
+    font-weight: bold !important; /* Puedes agregar otras propiedades si lo deseas */
+}
+
+/* Estilo para el video de fondo */
+.video-background {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+.video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no se pueda interactuar con el iframe */
+}
+
+/* Opcional: contenido sobre el video */
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.content-overlay h1 {
+    font-size: 3rem;
+}
+
+/* Botones agregar y quitar personalizados */
+.agregar-btn, .quitar-btn {
+    margin: 0 5px; /* Espacio entre los botones */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse sobre el botón */
+}
+
+#menu {
+    display: flex;
+    width: 400px;
+    height: 430px;
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+#menu img {
+    
+    
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+}
+
+#menu img:hover {
+    cursor: crosshair;
+    
+    transform: scale(1.2);
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.footer {
+    background-color: rgba(225, 2, 114, 0.5); /* Color de fondo del pie de página */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Centrar texto */
+    padding: 20px 0; /* Espaciado interno */
+}
+
+.footer p {
+    margin: 10px 0; /* Espaciado de los párrafos */
+}
+
+.footer .social-container {
+    display: flex; /* Habilitar flexbox */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    gap: 200px; /* Espacio entre los iconos */
+}
+
+.footer .social-icons {
+    margin: 10px 0; /* Espaciado en el bloque de iconos */
+    display: flex; /* Habilitar flexbox para iconos */
+    flex-direction: column; /* Colocar texto y logo en columna */
+    align-items: center; /* Centrar elementos en la columna */
+}
+
+.footer .social-icons a {
+    margin: 0 15px; /* Espaciado entre los enlaces */
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+.footer .social-icons .icon {
+    width: 40px; /* Ajusta el tamaño de los íconos */
+    height: 40px; /* Ajusta el tamaño de los íconos */
+    transition: transform 0.3s ease; /* Transición para el efecto hover */
+    margin-top: 10px; /* Espaciado entre el texto y el ícono */
+}
+
+.footer .social-icons .icon:hover {
+    transform: scale(1.5); /* Agranda el ícono al pasar el cursor */
+}
+
+* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    #menu {
+        width: 90%; /* Cambia el ancho a un 90% del contenedor padre en pantallas pequeñas */
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
+        margin-left: 0; /* Eliminar el margen izquierdo */
+    }
+    
+    #menu img {
+        flex-basis: 100%; /* Imágenes ocupan el 100% del ancho en pantallas pequeñas */
+        max-height: 200px; /* Limitar la altura máxima de las imágenes */
+        margin-bottom: 10px; /* Espacio entre las imágenes */
+    }
+}
+
+@media (max-width: 480px) {
+    #menu {
+        width: 100%; /* Ancho completo en pantallas muy pequeñas */
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
+    }
+
+    #menu img {
+        flex-basis: 100%; /* Una imagen por fila en pantallas muy pequeñas */
+        max-height: 150px; /* Limitar la altura máxima de las imágenes */
+    }
+}
