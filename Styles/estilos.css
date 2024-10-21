@@ -257,7 +257,7 @@ body {
 }
 
 .footer {
-    background-color:#ffd660; 
+    background-color: #ffd660; 
     color: #1f1c1c; /* Color del texto */
     text-align: center; /* Centrar texto */
     padding: 20px 0; /* Espaciado interno */
@@ -270,20 +270,20 @@ body {
 .footer .social-container {
     display: flex; /* Habilitar flexbox */
     justify-content: center; /* Centrar contenido horizontalmente */
-    gap: 300px; /* Espacio entre los iconos */
+    flex-wrap: wrap; /* Permitir que los íconos se ajusten a la línea siguiente */
+    gap: 20px; /* Espacio entre los iconos */
+    max-width: 100%; /* Asegurarse de que no exceda el ancho del contenedor */
 }
 
 .footer .social-icons {
-    margin: 10px 0; /* Espaciado en el bloque de iconos */
     display: flex; /* Habilitar flexbox para iconos */
     flex-direction: column; /* Colocar texto y logo en columna */
     align-items: center; /* Centrar elementos en la columna */
-    
 }
+
 .footer .social-icons a {
-    margin: 0 15px; /* Espaciado entre los enlaces */
+    margin: 0 5px; /* Espaciado entre los enlaces */
     text-decoration: none; /* Quitar subrayado del enlace */
-    margin-left: 20px; 
 }
 
 .footer .social-icons .icon {
@@ -291,13 +291,27 @@ body {
     height: 40px; /* Ajusta el tamaño de los íconos */
     transition: transform 0.3s ease; /* Transición para el efecto hover */
     margin-top: 10px; /* Espaciado entre el texto y el ícono */
-    margin-right: 20px; /* Ajusta este valor para mover el ícono a la derecha */
 }
 
 .footer .social-icons .icon:hover {
     transform: scale(1.5); /* Agranda el ícono al pasar el cursor */
 }
 
+/* Media Queries para ajustar en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .footer .social-container {
+        gap: 15px; /* Menos espacio en dispositivos pequeños */
+    }
+
+    .footer .social-icons .icon {
+        width: 30px; /* Reducir tamaño de íconos en móviles */
+        height: 30px; /* Reducir tamaño de íconos en móviles */
+    }
+    
+    .footer .social-icons a {
+        margin: 0 5px; /* Reducir márgenes en móviles */
+    }
+}
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
@@ -316,10 +330,6 @@ body {
         margin: 0 auto; /* Centrar las imágenes en caso de que haya variación de tamaño */
     }
 }
-@media (max-width: 768px) {
-    .footer .social-container {
-        gap: 15px; /* Menos espacio en dispositivos pequeños */
-    }}
 
 @media (max-width: 480px) {
     #menu {
