@@ -12,17 +12,19 @@
     <script src="js-carrito/script-carrito.js" defer></script>
 </head>
 <body>
+
+    <main>
     <div class="container-fluid">
 
         <!-- Sección de productos -->
-        <section id="cart-section" class="mt-4">
+        <section id="cart-section">
             <!-- Título "Tu Carrito" centrado con la clase .titulo-productos -->
             <h1 class="text-center titulo-productos">Tu Carrito</h1>
-            <div id="cart-container" class="row"></div>
+            <div id="cart-container" class="row g-0"></div>
         </section>
 
       <!-- Sección de dirección de envío -->
-<section id="shipping-section" class="mt-4 p-3 border">
+<section id="shipping-section" class="mt-4 p-3 border g-0">
     <!-- Título "¡Solo envíos a zona norte!" centrado con la clase .titulo-productos -->
     <h2 class="text-center titulo-productos">¡Solo envíos a zona norte!</h2>
     <form id="shipping-form">
@@ -67,10 +69,28 @@
     <!-- Contenedor para los botones, también centrados -->
     <div class="d-flex justify-content-center mt-3">
         <button class="btn btn-primary me-2" id="checkout-button">Ir a Pagar</button>
-        <button class="btn btn-secondary ms-2" id="back-button">Volver</button>
+        <button class="btn btn-secondary ms-2" id="back-button" onclick="window.location.href='index.html';">Volver</button>
     </div>
 </section>
 </section>
+</main>
+<footer class="footer">
+    <div class="social-container">
+        <div class="social-icons">
+            <p style="font-family: 'Lobster', cursive;">Visita nuestras redes:</p>
+            <a href="https://www.instagram.com/_pkbe" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icon">
+            </a>
+        </div>
+        <div class="social-icons">
+            <p style="font-family: 'Lobster', cursive;">Hacé tu pedido por WhatsApp:</p>
+            <a href="https://wa.me/1178988628" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
+            </a>
+        </div>
+    </div>
+</footer>
+
 </div>  
 </body>
 </html>

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizarCantidadesProductos();
 });
 
-// Función para modificar la cantidad de un producto en el carrito
+
 // Función para modificar la cantidad de un producto en el carrito
 function modificarCantidad(productId, action) {
     // Recuperar la cantidad actual del producto o establecerla en 0

@@ -1,1 +1,1 @@
-Carrito de compras Web para una local de comidas rapidas. En el cual se podran seleccionar distintos productos y realizar el pedido online al local
+Carrito de compras Web para una local de comidas rapidas. En el cual se podran seleccionar distintos productos y realizar el pedido online al local. Conectado con sdk de MercadoPago para que al realizar el pago lleve el importe total para ser transferido a la cuenta del local, tambien al realizar el pago se envia el pedido mediante whatsapp. 

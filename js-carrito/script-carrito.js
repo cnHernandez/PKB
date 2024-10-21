@@ -11,7 +11,7 @@
     console.log("Items del carrito:", cartItems);
 
     if (Object.keys(cartItems).length === 0) {
-        cartContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
+        cartContainer.innerHTML = '<p class="vacio-carrito">Ohh noo está vacío, volve atrás y llenalo!!</p>';
         document.getElementById('total').textContent = '0.00';
         document.getElementById('checkout-button').style.display = 'none';
         return;
@@ -140,3 +140,8 @@
 
 // Llama a mostrarCarrito al cargar la página para mostrar el contenido del carrito
 mostrarCarrito();
+
+// Borrar el carrito al cerrar la página
+window.addEventListener('beforeunload', function () {
+    localStorage.removeItem('cartItems'); // Limpiar el carrito al cerrar la página
+});

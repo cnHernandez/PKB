@@ -1,10 +1,27 @@
+/* Asegurar que el contenedor principal ocupe todo el ancho */
+main, section {
+    margin: 0  !important; /* Eliminar márgenes */
+    padding: 0; /* Eliminar relleno */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
+.container-fluid {
+    padding: 0 !important; /* Asegúrate de eliminar el relleno */
+}
 
+.vacio-carrito {
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem; /* Tamaño de fuente para pantallas grandes */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
 /* Aplicar la clase .titulo-productos */
 .titulo-productos {
     color: white;
@@ -16,17 +33,13 @@ html, body {
 /* Sección de dirección de envío */
 section#shipping-section {
     background-color: rgba(225, 2, 114, 0.5) !important; /* Fondo semitransparente */
-    border-radius: 10px;
     text-align: center;
     margin: 0 !important; /* Eliminar margen */
-    padding: 20px; /* Padding para mayor espacio */
+    padding: 20px 0; /* Elimina padding lateral */
     width: 100%;
 }
 
-/* Eliminar el margen superior de las secciones */
-section {
-    margin-top: 0 !important;  
-}
+
 
 /* Asegura que las etiquetas sean visibles */
 #shipping-section .form-label {
@@ -48,6 +61,17 @@ section {
     justify-content: center;
 }
 
+/* Eliminar márgenes no deseados del formulario */
+form#shipping-form {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin: 0; /* Eliminar márgenes */
+    padding: 0; /* Eliminar relleno */
+    width: 100%; /* Asegura que el formulario ocupe el 100% del ancho */
+    box-sizing: border-box;
+}
+
+
 /* Estilo para las tarjetas de productos (cards) */
 #cart-container .card {
     background-color: rgba(225, 2, 114, 0.5) !important; 
@@ -63,10 +87,9 @@ section {
 /* Sección de productos */
 #cart-section {
     background-color: #e10272; 
-    margin: 0 !important; 
-    padding: 20px; /* Padding para mayor espacio */
+    margin: 0 !important;  
     width: 100%; 
-    border-radius: 10px; 
+    padding: 20px 0; /* Elimina el padding lateral */
 }
 
 /* Estilo para el carrito */
@@ -76,6 +99,8 @@ section {
 
 #cart-container .row {
     margin-bottom: 15px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 /* Ajuste de tamaño de la tarjeta */
@@ -160,6 +185,46 @@ section {
 #checkout-button:hover, #back-button:hover {
     background-color: #d00260 !important; 
     border-color: #d00260 !important;
+}
+
+.footer {
+    background-color:  #e10272; /* Color de fondo del pie de página */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Centrar texto */
+    padding: 20px 0; /* Espaciado interno */
+}
+
+.footer p {
+    margin: 10px 0; /* Espaciado de los párrafos */
+}
+
+.footer .social-container {
+    display: flex; /* Habilitar flexbox */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    gap: 200px; /* Espacio entre los iconos */
+}
+
+.footer .social-icons {
+    margin: 10px 0; /* Espaciado en el bloque de iconos */
+    display: flex; /* Habilitar flexbox para iconos */
+    flex-direction: column; /* Colocar texto y logo en columna */
+    align-items: center; /* Centrar elementos en la columna */
+}
+
+.footer .social-icons a {
+    margin: 0 15px; /* Espaciado entre los enlaces */
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+.footer .social-icons .icon {
+    width: 40px; /* Ajusta el tamaño de los íconos */
+    height: 40px; /* Ajusta el tamaño de los íconos */
+    transition: transform 0.3s ease; /* Transición para el efecto hover */
+    margin-top: 10px; /* Espaciado entre el texto y el ícono */
+}
+
+.footer .social-icons .icon:hover {
+    transform: scale(1.5); /* Agranda el ícono al pasar el cursor */
 }
 
 /* Media Queries para Responsividad */

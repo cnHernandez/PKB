@@ -18,7 +18,6 @@ section {
 #productos {
     background-color: rgba(225, 2, 114, 0.5);
     padding: 20px;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,18 +270,21 @@ body {
     transform: scale(1.5); /* Agranda el ícono al pasar el cursor */
 }
 
-* Media Queries para Responsividad */
+/* Media Queries para Responsividad */
 @media (max-width: 768px) {
     #menu {
         width: 90%; /* Cambia el ancho a un 90% del contenedor padre en pantallas pequeñas */
         height: auto; /* Permitir que la altura se ajuste automáticamente */
         margin-left: 0; /* Eliminar el margen izquierdo */
+        padding: 0; /* Asegurar que no haya relleno adicional */
     }
     
     #menu img {
         flex-basis: 100%; /* Imágenes ocupan el 100% del ancho en pantallas pequeñas */
         max-height: 200px; /* Limitar la altura máxima de las imágenes */
         margin-bottom: 10px; /* Espacio entre las imágenes */
+        object-fit: cover; /* Ajustar el contenido de la imagen sin distorsión */
+        margin: 0 auto; /* Centrar las imágenes en caso de que haya variación de tamaño */
     }
 }
 
@@ -290,10 +292,14 @@ body {
     #menu {
         width: 100%; /* Ancho completo en pantallas muy pequeñas */
         height: auto; /* Permitir que la altura se ajuste automáticamente */
+        padding: 0; /* Quitar relleno adicional */
+        margin: 0 auto; /* Asegurar que el menú se mantenga centrado */
     }
 
     #menu img {
         flex-basis: 100%; /* Una imagen por fila en pantallas muy pequeñas */
         max-height: 150px; /* Limitar la altura máxima de las imágenes */
+        object-fit: cover; /* Ajustar el contenido de la imagen sin distorsión */
+        margin: 0 auto; /* Centrar las imágenes */
     }
 }
