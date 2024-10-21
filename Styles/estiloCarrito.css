@@ -206,7 +206,7 @@ form#shipping-form {
     display: flex; /* Habilitar flexbox */
     justify-content: center; /* Centrar contenido horizontalmente */
     flex-wrap: wrap; /* Permitir que los íconos se ajusten a la línea siguiente */
-    gap: 120px; /* Espacio entre los iconos */
+    gap: 100px; /* Espacio entre los iconos */
     max-width: 100%; /* Asegurarse de que no exceda el ancho del contenedor */
 }
 
