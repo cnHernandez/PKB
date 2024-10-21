@@ -270,7 +270,7 @@ body {
 .footer .social-container {
     display: flex; /* Habilitar flexbox */
     justify-content: center; /* Centrar contenido horizontalmente */
-    flex-wrap: wrap; /* Permitir que los íconos se ajusten a la línea siguiente */
+    flex-wrap: wrap !important; /* Permitir que los íconos se ajusten a la línea siguiente */
     gap: 100px; /* Espacio entre los iconos */
     max-width: 100%; /* Asegurarse de que no exceda el ancho del contenedor */
 }
@@ -300,7 +300,7 @@ body {
 /* Media Queries para ajustar en pantallas más pequeñas */
 @media (max-width: 768px) {
     .footer .social-container {
-        gap: 15px; /* Menos espacio en dispositivos pequeños */
+        gap: 20px; /* Menos espacio en dispositivos pequeños */
     }
 
     .footer .social-icons .icon {
