@@ -43,7 +43,7 @@
         <a class="nav-link" href="carrito.html">
             <i class="fas fa-shopping-cart"></i>
             <span id="cart-count" class="badge bg-primary">0</span>
-            Carrito
+            
         </a>
     </li>
 </ul>
@@ -66,7 +66,7 @@
     </div>
 </section>
 <section id="productos" class="container-fluid">
-    <h1 class="text-center titulo-productos">¡Elige tu burger favorita!</h1>
+    <h1 class="text-center titulo-productos">¡Elejí tu burger favorita!</h1>
     
     <div class="row">
         <!-- Producto 1 -->
@@ -84,7 +84,7 @@
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(1, 'remove')">
                     <i class="fas fa-minus"></i>
                 </button>
-                <span id="cantidad-1" class="mx-2">0</span>
+                <span id="cantidad-1" class="mx-2 cantidad">0</span>
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(1, 'add')">
                     <i class="fas fa-plus"></i>
                 </button>
@@ -106,7 +106,7 @@
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(2, 'remove')">
                     <i class="fas fa-minus"></i>
                 </button>
-                <span id="cantidad-2" class="mx-2">0</span>
+                <span id="cantidad-2" class="mx-2 cantidad">0</span>
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(2, 'add')">
                     <i class="fas fa-plus"></i>
                 </button>
@@ -128,7 +128,7 @@
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(3, 'remove')">
                     <i class="fas fa-minus"></i>
                 </button>
-                <span id="cantidad-3" class="mx-2">0</span>
+                <span id="cantidad-3" class="mx-2 cantidad">0</span>
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(3, 'add')">
                     <i class="fas fa-plus"></i>
                 </button>
@@ -150,7 +150,7 @@
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(4, 'remove')">
                     <i class="fas fa-minus"></i>
                 </button>
-                <span id="cantidad-4" class="mx-2">0</span>
+                <span id="cantidad-4" class="mx-2 cantidad">0</span>
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(4, 'add')">
                     <i class="fas fa-plus"></i>
                 </button>
@@ -172,7 +172,7 @@
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(5, 'remove')">
                     <i class="fas fa-minus"></i>
                 </button>
-                <span id="cantidad-5" class="mx-2">0</span>
+                <span id="cantidad-5" class="mx-2 cantidad">0</span>
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(5, 'add')">
                     <i class="fas fa-plus"></i>
                 </button>
@@ -194,7 +194,7 @@
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(6, 'remove')">
                     <i class="fas fa-minus"></i>
                 </button>
-                <span id="cantidad-6" class="mx-2">0</span>
+                <span id="cantidad-6" class="mx-2 cantidad">0</span>
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(6, 'add')">
                     <i class="fas fa-plus"></i>
                 </button>
@@ -216,7 +216,7 @@
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(7, 'remove')">
                     <i class="fas fa-minus"></i>
                 </button>
-                <span id="cantidad-7" class="mx-2">0</span>
+                <span id="cantidad-7" class="mx-2 cantidad">0</span>
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(7, 'add')">
                     <i class="fas fa-plus"></i>
                 </button>
@@ -238,7 +238,7 @@
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(8, 'remove')">
                     <i class="fas fa-minus"></i>
                 </button>
-                <span id="cantidad-8" class="mx-2">0</span>
+                <span id="cantidad-8" class="mx-2 cantidad">0</span>
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(8, 'add')">
                     <i class="fas fa-plus"></i>
                 </button>
@@ -260,7 +260,7 @@
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(9, 'remove')">
                     <i class="fas fa-minus"></i>
                 </button>
-                <span id="cantidad-9" class="mx-2">0</span>
+                <span id="cantidad-9" class="mx-2 cantidad">0</span>
                 <button class="btn btn-sm btn-outline-secondary" onclick="modificarCantidad(9, 'add')">
                     <i class="fas fa-plus"></i>
                 </button>
@@ -274,7 +274,7 @@
     </div>
     
 </section>
-        <section id="menu" class="container-fluid mt-5">
+        <section id="menu" class=" mt-5">
             <img src="Imagenes/menu1.PNG" alt="i1">
             <img src="Imagenes/menu2.PNG" alt="i2">
             <img src="Imagenes/menu3.PNG" alt="i3">
@@ -298,46 +298,18 @@
                 </form>
             </section>
 
-           <!-- Menú de navegación -->
-      <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
-         
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                 <!-- Menú centrado -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#productos">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#menu">Menú</a>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-    </nav>
-
     </main>
     
     <footer class="footer">
         <div class="social-container">
             <div class="social-icons">
-                <p style="font-family: 'Lobster', cursive;">Visita nuestras redes:</p>
+                <h4 style="font-family: 'Lobster', cursive;">Visita nuestras redes:</p>
                 <a href="https://www.instagram.com/_pkbe" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icon">
                 </a>
             </div>
             <div class="social-icons">
-                <p style="font-family: 'Lobster', cursive;">Hacé tu pedido por WhatsApp:</p>
+                <h4 style="font-family: 'Lobster', cursive;">Hacé tu pedido por WhatsApp:</p>
                 <a href="https://wa.me/5491178988628" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
                 </a>

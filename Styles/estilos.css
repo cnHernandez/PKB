@@ -9,14 +9,14 @@ section {
 }
 
 .titulo-productos {
-    color: white; /* Cambia el color del texto a blanco */
+    color: #ffd660; /* Cambia el color del texto a blanco */
     font-family: 'Lobster', cursive;/* Fuente personalizada */
     font-size: 2.5rem; /* Ajusta el tamaño de la fuente */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Agrega un poco de sombra para mejorar la legibilidad */
 }
 
 #productos {
-    background-color: rgba(225, 2, 114, 0.5);
+    background-color: #1f1c1c ;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(225, 2, 114, 0.7); /* Fondo semitransparente */
+    background-color:  rgba(255, 214, 96, 0.5);/* Fondo semitransparente */
     padding: 10px;
     border-radius: 0 0 10px 10px;
     display: none; /* Oculto por defecto */
@@ -56,7 +56,7 @@ section {
 
 .producto-description li {
     margin-bottom: 5px; /* Espaciado entre los elementos de la lista */
-    color: white;
+    color: rgb(15, 13, 13);
 }
 
 /* Asegura que las imágenes ocupen el ancho de la columna y se ajusten */
@@ -79,6 +79,11 @@ section {
     display: block;
 }
 
+.cantidad {
+    color: #ffd660; /* Cambia el color del texto */
+    font-weight: bold; /* Opcional: hacer el número más visible */
+}
+
 /* Control de cantidad (botones + y -) centrados */
 .cantidad-control {
     margin-top: 10px;
@@ -86,7 +91,7 @@ section {
 }
 
 .cantidad-color {
-    color: rgba(225, 2, 114, 0.5);
+    color: #1f1c1c !important;
     font-weight: bold; /* Otras propiedades que desees */
 }
 
@@ -103,42 +108,64 @@ main {
 
 /* Asegura que no haya márgenes laterales en el body */
 body {
-    background-color: #e10272;
+    background-color: #ffd660;
     margin: 0;
     padding: 0;
 }
 
 #contacto {
-    background-color: rgba(225, 2, 114, 0.5);
-    padding: 20px; 
-    width: 100%; /* Asegura que abarque el ancho completo */  
+    background-color: #1f1c1c; /* Color de fondo */
+    padding: 20px;
+    width: 100%; /* Asegura que abarque el ancho completo */
+    text-align: center; /* Centra el texto del encabezado */
+}
+
+#contacto form {
+    display: inline-block; /* Hace que el formulario se ajuste a su contenido */
+    width: auto; /* El formulario tendrá el tamaño de los elementos internos */
+}
+
+#contacto .form-control {
+    width: 30%; /* Ajusta el ancho de los inputs a un 50% del formulario */
+    margin: 0 auto; /* Centra los inputs */
+}
+
+#contacto textarea.form-control {
+    width: 100%; /* Ajusta el ancho del textarea */
+    margin: auto; /* Centra el textarea */
+    margin-right: 250px; /* Ajusta el margen izquierdo */
+}
+
+/* Cambia el color de los labels */
+#contacto label {
+    color: #ffd660; /* Aplica el color #ffd660 a los labels */
 }
 
 .btn-enviar {
-    background-color: #e10272 !important;
-    border-color: #e10272 !important;
-    color: white !important;
+    background-color: #ffd660 !important;
+    border-color: #ffd660 !important;
+    color: #1f1c1c  !important;
 }
 
 .btn-enviar:hover {
-    background-color: #d00266 !important; /* Color ligeramente más oscuro para el efecto hover */
-    border-color: #d00266 !important;
+    background-color: #fdcb36 !important; /* Color ligeramente más oscuro para el efecto hover */
+    border-color: #fdcb36 !important;
 }
 
 /* Cambiar el color de la barra de navegación */
 .navbar-custom {
-    background-color: #e10272; /* Cambia este color según tu preferencia */
+    background-color: #ffd660; /* Cambia este color según tu preferencia */
 }
 
 /* Estilo para los enlaces del menú */
 .navbar-nav .nav-link {
-    color: white !important; /* Color de texto blanco */
+    color: rgb(14, 13, 13) !important; /* Color de texto blanco */
     font-weight: bold; /* Texto en negrita */
 }
 
 /* Cambiar color del texto en hover */
 .navbar-nav .nav-link:hover {
-    color: #d00266; /* Color al pasar el mouse */
+    color: #e0950ad2; /* Color al pasar el mouse */
 }
 
 /* Estilo personalizado para el logo */
@@ -154,13 +181,13 @@ body {
 
 /* Estilo para el carrito */
 .navbar-nav.ms-auto .nav-link {
-    color: white !important; /* Color de texto blanco para el carrito */
+    color: #1f1c1c  !important; /* Color de texto blanco para el carrito */
 }
 
 /* Cambiar el color de la cantidad del carrito */
 #cart-count, #cart-count-bottom {
-    background-color: rgba(153, 91, 122, 0.5) !important;  
-    color: white !important; /* Cambia el color aquí */
+    background-color: rgba(218, 152, 11, 0.253) !important;  
+    color: #1f1c1c !important; /* Cambia el color aquí */
     font-weight: bold !important; /* Puedes agregar otras propiedades si lo deseas */
 }
 
@@ -191,7 +218,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #ffd660;
     text-align: center;
 }
 
@@ -207,10 +234,9 @@ body {
 
 #menu {
     display: flex;
-    width: 400px;
-    height: 430px;
+    align-items: justify;
     margin: 0 auto;
-    margin-left: 100px;
+    padding: 0;
 }
 
 #menu img {
@@ -231,8 +257,8 @@ body {
 }
 
 .footer {
-    background-color: rgba(225, 2, 114, 0.5); /* Color de fondo del pie de página */
-    color: #fff; /* Color del texto */
+    background-color:#ffd660; 
+    color: #1f1c1c; /* Color del texto */
     text-align: center; /* Centrar texto */
     padding: 20px 0; /* Espaciado interno */
 }
@@ -244,7 +270,7 @@ body {
 .footer .social-container {
     display: flex; /* Habilitar flexbox */
     justify-content: center; /* Centrar contenido horizontalmente */
-    gap: 200px; /* Espacio entre los iconos */
+    gap: 300px; /* Espacio entre los iconos */
 }
 
 .footer .social-icons {
@@ -252,11 +278,12 @@ body {
     display: flex; /* Habilitar flexbox para iconos */
     flex-direction: column; /* Colocar texto y logo en columna */
     align-items: center; /* Centrar elementos en la columna */
+    
 }
-
 .footer .social-icons a {
     margin: 0 15px; /* Espaciado entre los enlaces */
     text-decoration: none; /* Quitar subrayado del enlace */
+    margin-left: 20px; 
 }
 
 .footer .social-icons .icon {
@@ -264,11 +291,13 @@ body {
     height: 40px; /* Ajusta el tamaño de los íconos */
     transition: transform 0.3s ease; /* Transición para el efecto hover */
     margin-top: 10px; /* Espaciado entre el texto y el ícono */
+    margin-right: 20px; /* Ajusta este valor para mover el ícono a la derecha */
 }
 
 .footer .social-icons .icon:hover {
     transform: scale(1.5); /* Agranda el ícono al pasar el cursor */
 }
+
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
