@@ -263,3 +263,8 @@ form#shipping-form {
         width: 100%; /* Botones de ancho completo en pantallas muy pequeñas */
     }
 }
+
+@media (max-width: 768px) {
+    .footer .social-container {
+        gap: 15px; /* Menos espacio en dispositivos pequeños */
+    }}

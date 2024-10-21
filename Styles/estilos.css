@@ -316,6 +316,10 @@ body {
         margin: 0 auto; /* Centrar las imágenes en caso de que haya variación de tamaño */
     }
 }
+@media (max-width: 768px) {
+    .footer .social-container {
+        gap: 15px; /* Menos espacio en dispositivos pequeños */
+    }}
 
 @media (max-width: 480px) {
     #menu {
