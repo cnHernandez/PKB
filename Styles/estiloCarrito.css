@@ -13,6 +13,7 @@ html, body {
 }
 .container-fluid {
     padding: 0 !important; /* Asegúrate de eliminar el relleno */
+    margin: 0;
 }
 
 .vacio-carrito {
@@ -22,6 +23,19 @@ html, body {
     text-shadow: 1px 1px 2px rgba(240, 233, 217, 0.253);
     text-align: center;
 }
+
+/* Ajusta el margen para acercar los logos al texto */
+.logo-carrito {
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Añade una transición suave */
+}
+
+/* Agranda el logo cuando pasas el mouse */
+.logo-carrito:hover {
+    transform: scale(1.2); /* Agranda el logo al 120% cuando pasas el mouse */
+}
+
 .titulo-envios {
     color: #ffd660;
     font-family: 'Lobster', cursive;
