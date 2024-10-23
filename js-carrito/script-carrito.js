@@ -24,11 +24,12 @@
         totalGeneral += producto.precio * producto.cantidad;
 
         const productoCard = `
-            <div class="col-md-4">
+             <div class="col-md-4">
                 <div class="card mb-4">
                     <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
                     <div class="card-body">
                         <h5 class="card-title">${producto.nombre}</h5>
+                        <p class="card-text"> ${producto.tipo}</p> <!-- Mostrar tipo -->
                         <p class="card-text">Cantidad: ${producto.cantidad}</p>
                         <p class="card-text">Precio unitario: $${producto.precio.toFixed(2)}</p>
                         <p class="card-text">Total: $${total}</p>
@@ -103,7 +104,7 @@
     // Obtener los productos del carrito
     for (const productId in cartItems) {
         const producto = cartItems[productId];
-        mensaje += `${producto.nombre} - Cantidad: ${producto.cantidad} - Precio: $${(producto.precio * producto.cantidad).toFixed(2)}\n`;
+        mensaje += `${producto.nombre} ${producto.tipo} - Cantidad: ${producto.cantidad} - Precio: $${(producto.precio * producto.cantidad).toFixed(2)}\n`;
     }
 
     // Calcular el total

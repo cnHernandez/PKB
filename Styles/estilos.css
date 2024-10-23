@@ -42,7 +42,23 @@ section {
     border-radius: 0 0 10px 10px;
     display: none; /* Oculto por defecto */
     list-style-type: none; /* Eliminamos los puntos de la lista */
+    margin-top: 10px; /* Espaciado superior para separar el precio del select */
 }
+
+.d-flex {
+    align-items: center; /* Centra verticalmente los botones de radio */
+}
+
+   /* Cambiar el color del botón de radio seleccionado a negro */
+   .form-check-input:checked {
+    background-color: black !important; /* Color de fondo cuando está seleccionado */
+    border-color: black !important; /* Color del borde */
+}
+
+.form-check-input:checked:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25); /* Sombra para enfoque */
+}
+
 
 /* Mostrar la descripción al pasar el cursor por la imagen */
 .producto-container:hover .producto-description {
