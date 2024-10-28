@@ -1,6 +1,43 @@
   // Recuperar los productos del carrito del localStorage
   const cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
 
+  function validarFormularioEnvio() {
+    // Obtener valores de los campos
+    const calle = document.getElementById('calle').value.trim();
+    const numero = document.getElementById('numero').value.trim();
+    const entreCalles = document.getElementById('entre-calles').value.trim();
+    const localidad = document.getElementById('localidad').value.trim();
+
+    // Expresiones regulares
+    const soloLetras = /^[A-Za-z\s]+$/;
+    const soloNumeros = /^[0-9]+$/;
+
+    // Validar campo "Calle" (no vacío y solo letras)
+    if (calle === "" || !soloLetras.test(calle)) {
+        alert("El campo 'Calle' no puede estar vacío y debe contener solo letras.");
+        return false; // Esto evitará que el formulario se envíe
+    }
+
+    // Validar campo "Número" (no vacío y solo números)
+    if (numero === "" || !soloNumeros.test(numero)) {
+        alert("El campo 'Número' no puede estar vacío y debe contener solo números.");
+        return false; // Esto evitará que el formulario se envíe
+    }
+
+    // Validar campo "Entre Calles" (no vacío y solo letras)
+    if (entreCalles === "" || !soloLetras.test(entreCalles)) {
+        alert("El campo 'Entre Calles' no puede estar vacío y debe contener solo letras.");
+        return false; // Esto evitará que el formulario se envíe
+    }
+
+    // Validar campo "Localidad" (no vacío)
+    if (localidad === "") {
+        alert("Por favor, ingresa una localidad.");
+        return false; // Esto evitará que el formulario se envíe
+    }
+
+    return true; // Permitir el envío si todas las validaciones se pasan
+}
   function mostrarCarrito() {
     const cartContainer = document.getElementById('cart-container');
     cartContainer.innerHTML = '';
@@ -50,6 +87,9 @@
 
     // Configurar el evento de clic para el botón de pago
     checkoutButton.onclick = () => {
+        if (!validarFormularioEnvio()){
+            return;
+        }
         const items = Object.keys(cartItems).map(productId => {
             const producto = cartItems[productId];
             return {
@@ -57,7 +97,8 @@
                 quantity: producto.cantidad,
                 unit_price: producto.precio
             };
-        });
+        }
+    );
 
         // Enviar los productos al backend para crear la preferencia de pago
         fetch('http://localhost:8080/create_preference', {
@@ -98,7 +139,7 @@
   }
   function realizarPago(urlMercadoPago) {
     // Cambia esto por el número de WhatsApp del destinatario (incluye el código de país)
-    const numeroWhatsApp = '5491124577474'; // Ejemplo: '5491123456789' para Argentina
+    const numeroWhatsApp = '5491124577474'; 
     let mensaje = "Detalles de mi pedido:\n";
 
     // Obtener los productos del carrito

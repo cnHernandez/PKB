@@ -38,11 +38,10 @@
     <div id="cart-container" class="row g-0"></div>
 </section>
 
-      <!-- Sección de dirección de envío -->
+<!-- Sección de dirección de envío -->
 <section id="shipping-section" class="mt-4 p-3 border g-0">
-    <!-- Título "¡Solo envíos a zona norte!" centrado con la clase .titulo-productos -->
     <h2 class="text-center titulo-envios">¡Solo envíos a zona norte!</h2>
-    <form id="shipping-form" ></form>
+    <form id="shipping-form" onsubmit="return validarFormularioEnvio();">
         <!-- Grupo de campos Calle y Número en la misma fila -->
         <div class="row justify-content-center mb-3">
             <div class="col-md-6">
@@ -74,19 +73,18 @@
                 </div>
             </div>
         </div>
+
+        <!-- Sección de total y botones -->
+        <section id="total-section" class="mt-4">
+            <div>
+                <h2 class="text-center titulo-productos">Total: $<span id="total">0.00</span></h2>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <button class="btn btn-primary me-2" id="checkout-button">Ir a Pagar</button>
+                <button class="btn btn-secondary ms-2" id="back-button" onclick="window.location.href='index.html';">Volver</button>
+            </div>
+        </section>
     </form>
-<!-- Sección de total y botones -->
-<section id="total-section" class="mt-4">
-    <!-- Centrar el total con Bootstrap -->
-    <div>
-        <h2 class="text-center titulo-productos">Total: $<span id="total">0.00</span></h2>
-    </div>
-    <!-- Contenedor para los botones, también centrados -->
-    <div class="d-flex justify-content-center mt-3">
-        <button class="btn btn-primary me-2" id="checkout-button">Ir a Pagar</button>
-        <button class="btn btn-secondary ms-2" id="back-button" onclick="window.location.href='index.html';">Volver</button>
-    </div>
-</section>
 </section>
 <div class="video-container">
     <video src="https://carnehamburguesas.com/wp-content/uploads/2023/06/Carne_2023_RedisenoWeb_Video-Home-2.mp4" preload="auto" autoplay playsinline onclick="this.paused ? this.play() : this.pause()" loop muted>

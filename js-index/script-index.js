@@ -20,6 +20,22 @@ const preciosPorProductoYTipo = {
     9: { SIMPLE: 8000.00,  DOBLE: 9800.00 }   // CO
 };
 
+function validarFormulario() {
+    const nombre = document.getElementById('nombre').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    if (nombre === "") {
+        alert("Por favor, ingresa tu nombre.");
+        return false;
+    }
+
+    if (mensaje === "") {
+        alert("Por favor, ingresa un mensaje.");
+        return false;
+    }
+
+    return true; // Permite el envío si todos los campos están completos
+}
 
 // Función para modificar la cantidad de un producto en el carrito
 function modificarCantidad(productId, action) {
