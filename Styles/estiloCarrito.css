@@ -205,6 +205,20 @@ form#shipping-form {
     border-color: #fdcb36 !important;
 }
 
+/* Contenedor para que el video sea responsivo */
+.video-container {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para que no sea demasiado grande en pantallas grandes */
+    margin: 0 auto; /* Centra el video horizontalmente */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.video-container video {
+    width: 100%; /* Se ajusta al 100% del contenedor */
+    height: auto; /* Mantiene la proporción */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional para darle estilo */
+}
+
 .footer {
     background-color: #ffd660; 
     color: #1f1c1c; /* Color del texto */
