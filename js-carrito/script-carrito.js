@@ -51,6 +51,12 @@
 
     // Configurar el evento de clic para el botón de pago
     checkoutButton.onclick = () => {
+
+        if (!validarFormularioEnvio()) {
+
+            alert("Completa el Formulario correctamente para continuar con el pago...");
+            return; // Si la validación falla, no continuar
+        }
        // Desactivar temporalmente el evento beforeunload
        window.removeEventListener('beforeunload', clearCartOnClose);
 
@@ -159,3 +165,37 @@ function eliminarProducto(productId) {
 // Llama a mostrarCarrito al cargar la página para mostrar el contenido del carrito
 mostrarCarrito();
 
+function validarFormularioEnvio() {
+    // Obtener los valores de los campos
+    const calle = document.getElementById("calle").value.trim();
+    const numero = document.getElementById("numero").value.trim();
+    const entreCalles = document.getElementById("entre-calles").value.trim();
+    const localidad = document.getElementById("localidad").value.trim();
+
+    // Validar que no estén vacíos
+    if (!calle) {
+        alert("Por favor, ingresa la calle.");
+        return false;
+    }
+    if (!numero) {
+        alert("Por favor, ingresa el número.");
+        return false;
+    }
+    if (!entreCalles) {
+        alert("Por favor, ingresa las entre calles.");
+        return false;
+    }
+    if (!localidad) {
+        alert("Por favor, ingresa la localidad.");
+        return false;
+    }
+
+    // Validar que el número solo contenga dígitos
+    if (!/^\d+$/.test(numero)) {
+        alert("El número debe contener solo dígitos.");
+        return false;
+    }
+
+    // Si todas las validaciones pasan
+    return true;
+}
