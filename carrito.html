@@ -91,6 +91,51 @@
         <p>Su navegador no soporta la etiqueta de vídeo.</p>
     </video>
 </div>
+
+  <!-- Sección de Reseñas -->
+   <!-- Sección de Reseñas -->
+   <section id="reviews" class="my-5">
+    <div class="container">
+        <h1 class="titulo-productos text-center mx-2">Reseñas</h1>
+        <div class="row">
+            <!-- Columna de Reseñas -->
+            <div class="col-md-8">
+                <div id="reviews-list" class="row">
+                    <!-- Las reseñas de los usuarios se agregarán aquí -->
+                </div>
+            </div>
+            <!-- Columna de Formulario -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Agregar Reseña</h5>
+                        <form id="review-form">
+                            <div class="form-group">
+                                <label for="username">Nombre de Usuario</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="review">Reseña</label>
+                                <textarea class="form-control" id="review" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="rating">Calificación</label>
+                                <select class="form-control" id="rating" required>
+                                    <option value="5">⭐⭐⭐⭐⭐</option>
+                                    <option value="4">⭐⭐⭐⭐</option>
+                                    <option value="3">⭐⭐⭐</option>
+                                    <option value="2">⭐⭐</option>
+                                    <option value="1">⭐</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Reseña</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </main>
 <footer class="footer">
     <div class="social-container">
@@ -110,7 +155,6 @@
 </footer>
 
 </div>  
-
 
 </body>
 </html>

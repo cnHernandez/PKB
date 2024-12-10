@@ -199,3 +199,30 @@ function validarFormularioEnvio() {
     // Si todas las validaciones pasan
     return true;
 }
+
+function handleReviewFormSubmit(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const review = document.getElementById('review').value;
+    const rating = document.getElementById('rating').value;
+    
+    const reviewCard = document.createElement('div');
+    reviewCard.className = 'col-md-4';
+    reviewCard.innerHTML = `
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">${username}</h5>
+                <p class="card-text">${review}</p>
+                <p class="text-muted">${'⭐'.repeat(rating)}</p>
+            </div>
+        </div>
+    `;
+    
+    document.getElementById('reviews-list').appendChild(reviewCard);
+    
+    // Limpiar el formulario
+    document.getElementById('review-form').reset();
+}
+
+document.getElementById('review-form').addEventListener('submit', handleReviewFormSubmit);

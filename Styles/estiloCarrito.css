@@ -260,6 +260,16 @@ form#shipping-form {
     transform: scale(1.5); /* Agranda el ícono al pasar el cursor */
 }
 
+
+#reviews-list {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#reviews-list .col-12 {
+    padding-left: 0;
+}
+
 /* Media Queries para ajustar en pantallas más pequeñas */
 @media (max-width: 768px) {
     .footer .social-container {
